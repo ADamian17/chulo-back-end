@@ -46,9 +46,66 @@ const createMovie = (req, res) => {
   });
 };
 
+// Movies details
+const movieDetails = (req, res) => {
+  db.Movies.findById( req.params.id, (err, foundMovie) => {
+    if ( err ) return res,status(500).json({
+      status: 500,
+      data: foundMovie,
+      error: [{ message: 'Something went wrong. Please try again '}],
+    });
+    return res.status(200).json({
+      status: 200,
+      data: foundMovie,
+      requestedAt: new Date().toLocaleString(),
+    }); 
+  });
+};
 
+// Movie Update
+const movieUpdate = (req, res) => {
+  db.Movies.findByIdAndUpdate(
+    req.params.id,
+    req.body,
+    {new: true}, (err, updatedMovie) => {
+      if (err)  return res.status(500).json({
+        status: 500,
+        error: [{message: 'Something went wrong, Please try again'}],
+      });
+      res.json({
+        status: 200,
+        count: 1,
+        data: updatedMovie,
+        requestedAt: new Date().toLocaleString()
+    });
+  });
+};
+
+
+// Movie Delete
+ // Destroy user
+ const movieDelete = (req, res) => {
+  db.Movies.findByIdAndDelete(
+    req.params.id, 
+    (err, deletedMovie) =>{
+      if (err)  return res.status(500).json({
+        status: 500,
+        error: [{message: 'Something went wrong! Please try again'}],
+      });
+
+      res.json({
+        status:200,
+        count: 1,
+        data: deletedMovie,
+        requestedAt: new Date().toLocaleString(),
+    });
+  });
+};
 
 module.exports = {
 index,
-createMovie
+createMovie,
+movieDetails,
+movieUpdate,
+movieDelete
 }

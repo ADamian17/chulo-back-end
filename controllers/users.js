@@ -93,10 +93,9 @@ const destroy = (req, res) => {
         count: 1,
         data: deletedUser,
         requestedAt: new Date().toLocaleString(),
-      })
-    }
-  )
-}
+      });
+    });
+};
 
 module.exports = {
   index,
