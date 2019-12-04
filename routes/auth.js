@@ -6,9 +6,9 @@ const ctrl = require('../controllers')
 router.get('/users', ctrl.auth.index);
 router.post('/register', ctrl.auth.register);
 router.post('/login', ctrl.auth.login);
-// router.get("/verify", ctrl.auth.verify);
-// router.delete("/logout", ctrl.auth.logout);
-// router.put("/update/:userId", ctrl.auth.updateUser);
+router.get("/verify", ctrl.auth.verify);
+router.delete("/logout", ctrl.auth.logout);
+// router.put("/:id", ctrl.auth.updateUser);
 // router.get("/:id", ctrl.auth.userDetail);
 // router.delete("/:id", ctrl.auth.destroy);
 

@@ -117,23 +117,45 @@ const login = (req, res) => {
   });
 };
 
-const showUser = (req, res) => {
-  db.User.findById(req.params.userId)
-    .populate('posts')
-    .exec((err, foundUser) => {
-    if (err) return res.status(500).json(err);
-    res.json({
-      status: 200,
-      msg: "User detail",
-      data: foundUser
-    });
+// Verify
+const verify = (req, res ) => {
+  if ( !req.session.currentUser ) return res.status(401).json({ 
+    message: 'Unauthorized'
+  });
+  res.status(200).json({
+    status: 200,
+    message: `Current user verify. User ID: ${req.session.currentUser}`
   });
 };
+
+// Logout 
+const logout = (req, res) => {
+  if (!req.session.currentUser) return res.status(401),json({ status: 401, message: 'Unauthorized'});
+  req.session.destroy( (err) =>  {
+    if (err) return res.status(500).json({status: 500, message: 'something went wrong. Please try again'});
+    res.sendStatus(200);
+  });
+};
+
+
+// const showUser = (req, res) => {
+//   db.User.findById(req.params.userId)
+//     .populate('posts')
+//     .exec((err, foundUser) => {
+//     if (err) return res.status(500).json(err);
+//     res.json({
+//       status: 200,
+//       msg: "User detail",
+//       data: foundUser
+//     });
+//   });
+// };
 
 
 module.exports = {
   index,
   register,
   login,
-  showUser,
+  logout,
+  verify,
 };
