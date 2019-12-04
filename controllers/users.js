@@ -2,7 +2,7 @@ const db = require('../models');
 const bcrypt = require('bcryptjs');
 
 // // all Users
-const showUsers = (req, res) => {
+const index = (req, res) => {
   db.User.find({}, (err, allUsers) => {
     if (err)  return res.status(500).json({
       status: 500,
@@ -99,7 +99,7 @@ const destroy = (req, res) => {
 }
 
 module.exports = {
-  showUsers,
+  index,
   profile,
   update,
   destroy,

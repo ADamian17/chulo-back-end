@@ -26,15 +26,6 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 // Session
-// app.use(
-//   session({
-//     store: new MongoStore({ url: process.env.MONGODB_URI }),
-//     secret: process.env.SESSION_SECRET,
-//     resave: false,
-//     saveUninitialized: false
-//   })
-// );
-
 app.use(
   session({
   store: new MongoStore({ url: process.env.MONGO_URI }),
@@ -50,5 +41,6 @@ app.use(
 // Routes
 app.use("/api/v1/auth", routes.auth);
 app.use("/api/v1/users", routes.users);
+app.use("/api/v1/movies", routes.movies);
 
 app.listen( PORT, () => console.log(`Server connected at http://localhost:${PORT}`));
