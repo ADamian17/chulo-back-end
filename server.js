@@ -48,7 +48,7 @@ app.use(
 
 
 // Routes
-// app.use("/api/v1", routes.api);
 app.use("/api/v1/auth", routes.auth);
+app.use("/api/v1/users", routes.users);
 
 app.listen( PORT, () => console.log(`Server connected at http://localhost:${PORT}`));
