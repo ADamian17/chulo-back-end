@@ -13,9 +13,9 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 // testing
-app.use('/', (req, res ) => {
-  res.send('<h1>CHULO</h1>');
-});
+// app.use('/', (req, res ) => {
+//   res.send('<h1>CHULO</h1>');
+// });
 
 // Api Route
 // app.use("/api/v1", routes.api);

@@ -21,7 +21,6 @@ const UserSchema = mongoose.Schema({
   free_plan: {
     type: Boolean,
     default: false,
-    required: [true, 'Password is required'],
   },
   // my_movies: [{
   //   type: Schema.Types.ObjectId,
