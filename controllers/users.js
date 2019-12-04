@@ -1,4 +1,5 @@
-const db = require('../models')
+const db = require('../models');
+const bcrypt = require('bcryptjs');
 
 // // all Users
 const showUsers = (req, res) => {
@@ -35,54 +36,46 @@ const profile = (req, res) => {
 };
 
 // Update User
-//  const update = (req, res) => {
-//   db.User.findByIdAndUpdate(req.params.id, (err, foundUser) => {
-//     if (err) console.log(err);
-
-//     if (req.body.name) {
-//       foundUser.name = req.body.name
-//     }
-
-//     if (req.body.email) {
-//       foundUser.email = req.body.email
-//     }
-
-//     if (req.body.password) {
-//       let updatedPassword = bcrypt.hashSync(req.body.password, 10);
-//       foundUser.password = updatedPassword;
-//     }
-
-//     foundUser.save( (err, updatedUser) => {
-//       if (err) { res.json({ status: 400, message: 'Unable to Update', 
-//           err, requestedAt: new Date().toLocaleString()
-//       });
-//     }
-//     res.json({
-//       status: 200,
-//       data: updatedUser,
-//       requestedAt: new Date().toLocaleString()
-//     });
-//    });
-//   });
-//  };
 const update = (req, res) => {
-  db.User.findByIdAndUpdate(
-    req.params.id,
-    req.body,
-    {new: true}, (err, updatedUser) => {
-      if (err)  return res.status(500).json({
-        status: 500,
-        error: [{message: 'Something went wrong. Please try again'}],
+  db.User.findById(
+    bcrypt.genSalt(10, (err, salt) => {
+      if (err)
+        return res.status(500).json({
+          status: 500,
+          message: "Something went wrong. Please try again"
+       });
+       bcrypt.hash(req.body.password, salt, (err, hash) => {
+        if (err)
+          return res.status(500).json({
+            status: 500,
+            message: "Something went wrong. Please try again"
+          });
+        const updatedUser = {
+          name: req.body.name,
+          email: req.body.email,
+          password: hash,
+          birthday: req.body.birthday,
+        };
+        db.User.findByIdAndUpdate(
+          req.params.id,
+          updatedUser,
+          {new: true}, (err, updatedUser) => {
+            if (err)  return res.status(500).json({
+              status: 500,
+              error: [{message: 'Something went wrong. Please try again'}],
+            });
+            res.json({
+              status: 200,
+              count: 1,
+              data: updatedUser,
+              requestedAt: new Date().toLocaleString()
+          });
+        });
       });
-      res.json({
-        status: 200,
-        count: 1,
-        data: updatedUser,
-        requestedAt: new Date().toLocaleString()
-      });
-    });
-}
-
+    })
+  )
+ 
+};
 
 
  // Destroy user
