@@ -1,22 +1,6 @@
 const bcrypt = require('bcryptjs');
 const db = require('../models');
 
-// all Users
-const index = (req, res) => {
-  db.User.find({}, (err, allUsers) => {
-    if (err)  return res.status(500).json({
-      status: 500,
-      error: [{message: 'Something went wrong! Please try again'}],
-    });
-    
-    res.json({
-      status: 200,
-      count: allUsers.length,
-      data: allUsers,
-      requestedAt: new Date().toLocaleString(),
-    });
-  });
-};
 
 // Create User
 const register = (req, res) => {
@@ -138,22 +122,8 @@ const logout = (req, res) => {
 };
 
 
-// const showUser = (req, res) => {
-//   db.User.findById(req.params.userId)
-//     .populate('posts')
-//     .exec((err, foundUser) => {
-//     if (err) return res.status(500).json(err);
-//     res.json({
-//       status: 200,
-//       msg: "User detail",
-//       data: foundUser
-//     });
-//   });
-// };
-
 
 module.exports = {
-  index,
   register,
   login,
   logout,
