@@ -36,30 +36,6 @@ const profile = (req, res) => {
 };
 
 // Update User
-// numero 1
-// const update = (req, res) => { 
-//   let password = req.body.password;
-//   bcrypt.hash(password, (hash) => {
-//     req.body.password = hash;
-//     db.User.findByIdAndUpdate(
-//       req.params.id,
-//       req.body,
-//       {new: true}, (err, updatedUser) => {
-//         if (err)  return res.status(500).json({
-//           status: 500,
-//           error: [{message: 'Something went wrong. Please try again'}],
-//         });
-//         res.json({
-//           status: 200,
-//           count: 1,
-//           data: updatedUser,
-//           requestedAt: new Date().toLocaleString()
-//       });
-//     });
-//   });
-// }
-
-
 const update = (req, res) => {
   db.User.findById(
     bcrypt.genSalt(10, (err, salt) => {
