@@ -18,7 +18,6 @@ const index = (req, res) => {
   });
 };
 
-
 // SHow One User
 const profile = (req, res) => {
   db.User.findById( req.params.id) 
