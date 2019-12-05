@@ -1,9 +1,9 @@
 const db = require('../models');
 
-const eventList = require('./classes.json');
+const movies = require('./movies.json');
 
 db.Movies.remove({}, () => {
-	eventList.forEach(movie => {
+	movies.forEach(movie => {
 		db.Movies.create(movie, (error, createdMovie) => {
 			if (error) return console.log(error);
 			console.log(createdMovie);

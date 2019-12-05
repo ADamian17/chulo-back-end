@@ -21,8 +21,10 @@ const index = (req, res) => {
 
 // SHow One User
 const profile = (req, res) => {
-  db.User.findById( req.params.id, (err, foundProfile) => {
-    if ( err ) return res,status(500).json({
+  db.User.findById( req.params.id) 
+  .populate('my_movies')
+  .exec( (err, foundProfile) => {
+    if ( err ) return res.status(500).json({
       status: 500,
       data: foundProfile,
       error: [{ message: 'Something went wrong. Please try again '}],
@@ -69,13 +71,35 @@ const update = (req, res) => {
               count: 1,
               data: updatedUser,
               requestedAt: new Date().toLocaleString()
-          });
-        });
+            });
+         });
       });
-    })
-  )
- 
+   }))
 };
+
+// Add Movie
+const addMovie = (req,res) => {
+  const movie = req.params.movieId;
+  console.log(movie)
+  db.User.findById(req.params.id, (err, foundUser) =>{
+      if (err) return res.status(500).json({
+          status: 500,
+          error: [{message: 'Uh oh, something went wrong. Please try again'}],
+      });
+      foundUser.my_movies.push(movie);
+      foundUser.save((err, savedUser) => {
+        console.log(savedUser)
+          if (err) return res.status(500).json({
+              status: 500,
+              error: [{message: 'Uh oh, something went wrong. Movie can not be added'}, err],
+          });
+          return res.status(201).json({
+              status: 201,
+              data: savedUser,
+          }); 
+      })
+  });
+}
 
 
  // Destroy user
@@ -101,5 +125,6 @@ module.exports = {
   index,
   profile,
   update,
+  addMovie,
   destroy,
 };

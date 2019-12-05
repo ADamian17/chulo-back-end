@@ -83,7 +83,6 @@ const movieUpdate = (req, res) => {
 
 
 // Movie Delete
- // Destroy user
  const movieDelete = (req, res) => {
   db.Movies.findByIdAndDelete(
     req.params.id, 
