@@ -122,5 +122,4 @@ createMovie,
 movieDetails,
 movieUpdate,
 movieDelete,
-getGenre
 }
