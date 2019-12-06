@@ -1,20 +1,35 @@
 const db = require('../models');
 
 // all movies
-// // all Users
 const index = (req, res) => {
-  db.Movies.find({}, (err, allUsers) => {
-    if (err)  return res.status(500).json({
-      status: 500,
-      error: [{message: 'Something went wrong! Please try again'}],
+  if(req.query.genre){
+    db.Movies.find({genre: {$in:req.query.genre}}, (err, foundGenre) => {
+      if ( err ) return res.status(500).json({
+        status: 500,
+        data: foundGenre,
+        error: [{ message: 'Something went wrong. Genre not found'}],
+      });
+      return res.status(200).json({
+        status: 200,
+        data: foundGenre,
+        requestedAt: new Date().toLocaleString(),
+      });
     });
-    res.json({
-      status: 200,
-      count: allUsers.length,
-      data: allUsers,
-      requestedAt: new Date().toLocaleString(),
+  } else {
+    db.Movies.find({}, (err, allUsers) => {
+      if (err)  return res.status(500).json({
+        status: 500,
+        error: [{message: 'Something went wrong! Please try again'}],
+      });
+      res.json({
+        status: 200,
+        count: allUsers.length,
+        data: allUsers,
+        requestedAt: new Date().toLocaleString(),
+      });
     });
-  });
+  }
+  
 };
 
 // create movie
@@ -49,7 +64,7 @@ const createMovie = (req, res) => {
 // Movies details
 const movieDetails = (req, res) => {
   db.Movies.findById( req.params.id, (err, foundMovie) => {
-    if ( err ) return res,status(500).json({
+    if ( err ) return res.status(500).json({
       status: 500,
       data: foundMovie,
       error: [{ message: 'Something went wrong. Please try again '}],
@@ -106,5 +121,5 @@ index,
 createMovie,
 movieDetails,
 movieUpdate,
-movieDelete
+movieDelete,
 }

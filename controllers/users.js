@@ -18,23 +18,22 @@ const index = (req, res) => {
   });
 };
 
-
 // SHow One User
 const profile = (req, res) => {
-  db.User.findById( req.params.id) 
-  .populate('my_movies')
-  .exec( (err, foundProfile) => {
-    if ( err ) return res.status(500).json({
-      status: 500,
-      data: foundProfile,
-      error: [{ message: 'Something went wrong. Please try again '}],
+  db.User.findById(req.params.id)
+    .populate('my_movies')
+    .exec((err, foundProfile) => {
+      if (err) return res.status(500).json({
+        status: 500,
+        data: foundProfile,
+        error: [{ message: 'Something went wrong. Please try again '}],
+      });
+      return res.status(200).json({
+        status: 200,
+        data: foundProfile,
+        requestedAt: new Date().toLocaleString(),
+      }); 
     });
-    return res.status(200).json({
-      status: 200,
-      data: foundProfile,
-      requestedAt: new Date().toLocaleString(),
-    }); 
-  });
 };
 
 // Update User
@@ -80,7 +79,6 @@ const update = (req, res) => {
 // Add Movie
 const addMovie = (req,res) => {
   const movie = req.params.movieId;
-  console.log(movie)
   db.User.findById(req.params.id, (err, foundUser) =>{
       if (err) return res.status(500).json({
           status: 500,

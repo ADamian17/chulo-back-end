@@ -7,7 +7,7 @@ router.get('/', ctrl.movies.index);
 router.post('/new_movie', ctrl.movies.createMovie);
 router.get('/:id', ctrl.movies.movieDetails);
 router.put('/:id', ctrl.movies.movieUpdate);
-router.delete('/:id', ctrl.movies.movieDelete)
+router.delete('/:id', ctrl.movies.movieDelete);
 
 
 
