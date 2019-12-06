@@ -14,10 +14,10 @@ const MoviesSchema = mongoose.Schema({
     required: [true, 'Image is required'],
     unique: true,
   },
-  category: {
+  genre: [{
     type: String,
     required: [true, 'Category is required'],
-  },
+  }],
   description: {
     type: String,
     required: [true, 'Description is required'],

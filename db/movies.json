@@ -3,7 +3,7 @@
     "title": "Batman", 
     "year":"1989", 
     "img":"http://www.gstatic.com/tv/thumb/v22vodart/11724/p11724_v_v8_ac.jpg", 
-    "category": "Crime/Action", 
+    "genre": ["Action"], 
     "description": "Having witnessed his parents' brutal murder as a child, millionaire philanthropist Bruce Wayne (Michael Keaton) fights crime in Gotham City disguised as Batman, a costumed hero who strikes fear into the hearts of villains. But when a deformed madman who calls himself The Joker (Jack Nicholson) seizes control of Gotham's criminal underworld, Batman must face his most ruthless nemesis ever while protecting both his identity and his love interest, reporter Vicki Vale (Kim Basinger).", 
     "movie_link": "",
     "cast": [
@@ -25,7 +25,7 @@
     "title": "Batman Begins", 
     "year":"2005", 
     "img":"http://www.gstatic.com/tv/thumb/v22vodart/35903/p35903_v_v8_bb.jpg", 
-    "category": "Crime/Action", 
+    "genre": ["Crime"], 
     "description": "A young Bruce Wayne (Christian Bale) travels to the Far East, where he's trained in the martial arts by Henri Ducard (Liam Neeson), a member of the mysterious League of Shadows. When Ducard reveals the League's true purpose -- the complete destruction of Gotham City -- Wayne returns to Gotham intent on cleaning up the city without resorting to murder. With the help of Alfred (Michael Caine), his loyal butler, and Lucius Fox (Morgan Freeman), a tech expert at Wayne Enterprises, Batman is born.", 
     "movie_link": "",
     "cast": [
@@ -51,7 +51,7 @@
     "title": "Batman The Dark Knight", 
     "year":"2008", 
     "img":"http://www.gstatic.com/tv/thumb/v22vodart/173378/p173378_v_v8_at.jpg", 
-    "category": "Crime/Action", 
+    "genre": ["fantasy"], 
     "description": "With the help of allies Lt. Jim Gordon (Gary Oldman) and DA Harvey Dent (Aaron Eckhart), Batman (Christian Bale) has been able to keep a tight lid on crime in Gotham City. But when a vile young criminal calling himself the Joker (Heath Ledger) suddenly throws the town into chaos, the caped Crusader begins to tread a fine line between heroism and vigilantism.", 
     "movie_link": "",
     "cast": [
@@ -65,6 +65,20 @@
       },
       { 
         "actor_name": "Heath Ledger",
+        "actor_photo": ""
+      }
+    ]
+  },
+  {
+    "title": "The Proposal", 
+    "year":"2009", 
+    "img":"http://www.gstatic.com/tv/thumb/v22vodart/192250/p192250_v_v8_ac.jpg", 
+    "genre": ["comedy"], 
+    "description": "Faced with deportation to her native Canada, high-powered book editor Margaret Tate (Sandra Bullock) says she's engaged to marry Andrew Paxton (Ryan Reynolds), her hapless assistant. Andrew agrees to the charade, but imposes a few conditions of his own, including flying to Alaska to meet his eccentric family. With a suspicious immigration official always lurking nearby, Margaret and Andrew must stick to their wedding plan despite numerous mishaps.", 
+    "movie_link": "",
+    "cast": [
+      { 
+        "actor_name": "Ryan Reynolds",
         "actor_photo": ""
       }
     ]
