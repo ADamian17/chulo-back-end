@@ -21,17 +21,20 @@ const UserSchema = mongoose.Schema({
   },
   free_plan: {
     type: Boolean,
-    default: false,
+    default: true,
   },
   my_movies: [{
     type: Schema.Types.ObjectId,
     ref: 'Movie',
   }],
-  // payment: [{
-  //   type: Schema.Types.ObjectId,
-  //   ref: 'Payment',
-  //  required: [true, 'Payment is required'],
-  // }],
+  payment: {
+    first_name: {type: String},
+    last_name: {type: String},
+    card_num: {type: String},
+    exp_day: {type: String},
+    exp_month: {type: String},
+    code: {type: String},
+  },
   createdAt: {
     type: Date,
     default: Date.now,
