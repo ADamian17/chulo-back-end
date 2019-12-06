@@ -5,7 +5,8 @@ const db = require('../models');
 // Create User
 const register = (req, res) => {
   if (
-    !req.body.name ||
+    !req.body.first_name ||
+    !req.body.last_name ||
     !req.body.email ||
     !req.body.password ||
     !req.body.birthday 
@@ -44,11 +45,12 @@ const register = (req, res) => {
             message: "Something went wrong. Please try again"
           });
         const newUser = {
-          name: req.body.name,
+          first_name: req.body.first_name,
+          last_name: req.body.last_name,
           email: req.body.email,
           password: hash,
           birthday: req.body.birthday,
-          payment:req.body.payment
+          payment: req.body.payment
         };
         db.User.create(newUser, (err) => {
           console.log('create user')
