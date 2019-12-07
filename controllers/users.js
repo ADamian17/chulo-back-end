@@ -38,6 +38,7 @@ const profile = (req, res) => {
 
 // Update User
 const update = (req, res) => {
+  req.body.free_plan = false
   db.User.findByIdAndUpdate(
     req.params.id,
     req.body,
@@ -55,7 +56,9 @@ const update = (req, res) => {
    });
 };
 
+// delete payment
 const destroyPayment = (req, res) => {
+  req.body.payment = null
   db.User.findByIdAndUpdate(
     req.params.id,
     req.body,

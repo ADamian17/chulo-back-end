@@ -18,7 +18,6 @@ const register = (req, res) => {
     });
   }
   db.User.findOne({ email: req.body.email }, (err, foundUser) => {
-    console.log('found user');
     if (err)
       return res.status(500).json({
         status: 500,
@@ -53,7 +52,6 @@ const register = (req, res) => {
           payment: req.body.payment
         };
         db.User.create(newUser, (err) => {
-          console.log('create user')
           if(err) console.log(err)
           if (err)
             return res.status(500).json({
