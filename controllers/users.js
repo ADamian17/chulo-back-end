@@ -56,7 +56,9 @@ const update = (req, res) => {
    });
 };
 
+// delete payment
 const destroyPayment = (req, res) => {
+  req.body.payment = null
   db.User.findByIdAndUpdate(
     req.params.id,
     req.body,
