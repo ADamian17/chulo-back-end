@@ -38,6 +38,7 @@ const profile = (req, res) => {
 
 // Update User
 const update = (req, res) => {
+  req.body.free_plan = false
   db.User.findByIdAndUpdate(
     req.params.id,
     req.body,
