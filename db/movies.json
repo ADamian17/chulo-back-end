@@ -3,7 +3,7 @@
     "title": "Batman", 
     "year":"1989", 
     "img":"http://www.gstatic.com/tv/thumb/v22vodart/11724/p11724_v_v8_ac.jpg", 
-    "genre": ["Action"], 
+    "genre": ["action, crime"], 
     "description": "Having witnessed his parents' brutal murder as a child, millionaire philanthropist Bruce Wayne (Michael Keaton) fights crime in Gotham City disguised as Batman, a costumed hero who strikes fear into the hearts of villains. But when a deformed madman who calls himself The Joker (Jack Nicholson) seizes control of Gotham's criminal underworld, Batman must face his most ruthless nemesis ever while protecting both his identity and his love interest, reporter Vicki Vale (Kim Basinger).", 
     "movie_link": "",
     "cast": [
@@ -25,7 +25,7 @@
     "title": "Batman Begins", 
     "year":"2005", 
     "img":"http://www.gstatic.com/tv/thumb/v22vodart/35903/p35903_v_v8_bb.jpg", 
-    "genre": ["Crime"], 
+    "genre": ["crime , action"], 
     "description": "A young Bruce Wayne (Christian Bale) travels to the Far East, where he's trained in the martial arts by Henri Ducard (Liam Neeson), a member of the mysterious League of Shadows. When Ducard reveals the League's true purpose -- the complete destruction of Gotham City -- Wayne returns to Gotham intent on cleaning up the city without resorting to murder. With the help of Alfred (Michael Caine), his loyal butler, and Lucius Fox (Morgan Freeman), a tech expert at Wayne Enterprises, Batman is born.", 
     "movie_link": "",
     "cast": [
@@ -51,7 +51,7 @@
     "title": "Batman The Dark Knight", 
     "year":"2008", 
     "img":"http://www.gstatic.com/tv/thumb/v22vodart/173378/p173378_v_v8_at.jpg", 
-    "genre": ["fantasy"], 
+    "genre": ["action ,fantasy"], 
     "description": "With the help of allies Lt. Jim Gordon (Gary Oldman) and DA Harvey Dent (Aaron Eckhart), Batman (Christian Bale) has been able to keep a tight lid on crime in Gotham City. But when a vile young criminal calling himself the Joker (Heath Ledger) suddenly throws the town into chaos, the caped Crusader begins to tread a fine line between heroism and vigilantism.", 
     "movie_link": "",
     "cast": [
@@ -73,12 +73,40 @@
     "title": "The Proposal", 
     "year":"2009", 
     "img":"http://www.gstatic.com/tv/thumb/v22vodart/192250/p192250_v_v8_ac.jpg", 
-    "genre": ["comedy"], 
+    "genre": ["comedy, romance"], 
     "description": "Faced with deportation to her native Canada, high-powered book editor Margaret Tate (Sandra Bullock) says she's engaged to marry Andrew Paxton (Ryan Reynolds), her hapless assistant. Andrew agrees to the charade, but imposes a few conditions of his own, including flying to Alaska to meet his eccentric family. With a suspicious immigration official always lurking nearby, Margaret and Andrew must stick to their wedding plan despite numerous mishaps.", 
     "movie_link": "",
     "cast": [
       { 
         "actor_name": "Ryan Reynolds",
+        "actor_photo": ""
+      }
+    ]
+  },
+  {
+    "title": "Joker", 
+    "year":"2019", 
+    "img":"https://pbs.twimg.com/media/EDEsh0gU4AUTO3P?format=jpg&name=900x900", 
+    "genre": ["crime, drama"], 
+    "description": "Forever alone in a crowd, failed comedian Arthur Fleck seeks connection as he walks the streets of Gotham City. Arthur wears two masks -- the one he paints for his day job as a clown, and the guise he projects in a futile attempt to feel like he's part of the world around him. Isolated, bullied and disregarded by society, Fleck begins a slow descent into madness as he transforms into the criminal mastermind known as the Joker.", 
+    "movie_link": "",
+    "cast": [
+      { 
+        "actor_name": "joaquin phoenix",
+        "actor_photo": ""
+      }
+    ]
+  },
+  {
+    "title": "Coco", 
+    "year":"2017", 
+    "img":"https://m.media-amazon.com/images/M/MV5BYjQ5NjM0Y2YtNjZkNC00ZDhkLWJjMWItN2QyNzFkMDE3ZjAxXkEyXkFqcGdeQXVyODIxMzk5NjA@._V1_.jpg", 
+    "genre": ["Fantasy, Mystery"], 
+    "description": "Despite his family's generations-old ban on music, young Miguel dreams of becoming an accomplished musician like his idol Ernesto de la Cruz. Desperate to prove his talent, Miguel finds himself in the stunning and colorful Land of the Dead. After meeting a charming trickster named Héctor, the two new friends embark on an extraordinary journey to unlock the real story behind Miguel's family history.", 
+    "movie_link": "",
+    "cast": [
+      { 
+        "actor_name": "",
         "actor_photo": ""
       }
     ]

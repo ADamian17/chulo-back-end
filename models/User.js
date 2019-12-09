@@ -35,7 +35,7 @@ const UserSchema = mongoose.Schema({
     first_name: {type: String},
     last_name: {type: String},
     card_num: {type: String},
-    exp_day: {type: String},
+    exp_year: {type: String},
     exp_month: {type: String},
     code: {type: String},
   },
