@@ -110,5 +110,63 @@
         "actor_photo": ""
       }
     ]
+  },
+  {
+    "title": "Friends with Benefits", 
+    "year":"2011", 
+    "img":"http://www.gstatic.com/tv/thumb/v22vodart/8405003/p8405003_v_v8_ab.jpg", 
+    "genre": [" romance, comedy "], 
+    "description": "Jamie (Mila Kunis) is a New York-based executive recruiter who entices Dylan (Justin Timberlake), an art director from Los Angeles, to take a job at the New York office of GQ magazine. Finding that they have much in common, the two become fast friends. Feeling jaded by a number of broken romances, Dylan and Jamie decide that they are ready to quit looking for true love and focus on having fun. However, complications unfold when the two best pals add sex to their relationship.", 
+    "movie_link": "",
+    "cast": [
+      { 
+        "actor_name": "Mila Kunis",
+        "actor_photo": ""
+      },
+      { 
+        "actor_name": "Justin Timberlake",
+        "actor_photo": ""
+      }
+    ]
+  },
+  {
+    "title": "That Awkward Moment", 
+    "year":"2014", 
+    "img":"http://www.gstatic.com/tv/thumb/v22vodart/10093193/p10093193_v_v8_ab.jpg", 
+    "genre": [" romance, comedy "], 
+    "description": "Best pals Jason (Zac Efron) and Daniel (Miles Teller) indulge in casual flings and revel in their carefree, unattached lives. After learning that the marriage of their friend Mikey (Michael B. Jordan) is over, they gladly welcome him back into their circle. The three young men make a pact to have fun and avoid commitment. However, when all three find themselves involved in serious relationships, they must keep their romances secret from one another.", 
+    "movie_link": "",
+    "cast": [
+      { 
+        "actor_name": "Zac Efron",
+        "actor_photo": ""
+      },
+      { 
+        "actor_name": "Miles Teller",
+        "actor_photo": ""
+      },
+      { 
+        "actor_name": "Michael B. Jordan",
+        "actor_photo": ""
+      }
+    ]
+  },
+  {
+    "title": "Need for Speed", 
+    "year":"2014", 
+    "img":"http://www.gstatic.com/tv/thumb/v22vodart/10173171/p10173171_v_v8_ac.jpg", 
+    "genre": [" drama, crime "], 
+    "description": "Tobey Marshall (Aaron Paul), a mechanic, races muscle cars in an underground circuit. Struggling to keep his business afloat, he reluctantly partners with wealthy but treacherous Dino Brewster (Dominic Cooper). However, Dino frames Tobey for a crime that sends him to prison. Two years later, Tobey is out and bent on revenge; his only chance to take down Dino is to beat him in a high-stakes race. But to get there in time, he must successfully evade an army of cops and bounty hunters.", 
+    "movie_link": "",
+    "cast": [
+      { 
+        "actor_name": "Aaron Pau",
+        "actor_photo": ""
+      },
+      { 
+        "actor_name": "Dominic Cooper",
+        "actor_photo": ""
+      }
+    ]
   }
 ]
