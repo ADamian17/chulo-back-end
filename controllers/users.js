@@ -99,6 +99,28 @@ const addMovie = (req,res) => {
 }
 
 
+const removeMovie = (req,res) => {
+  const movie = req.params.movieId;
+  db.User.findById(req.params.id, (err, foundUser) =>{
+      if (err) return res.status(500).json({
+          status: 500,
+          error: [{message: 'Uh oh, something went wrong. Please try again'}],
+      });
+      foundUser.my_movies.pop(movie);
+      foundUser.save((err, savedUser) => {
+          if (err) return res.status(500).json({
+              status: 500,
+              error: [{message: 'Uh oh, something went wrong. Movie can not be added'}, err],
+          });
+          return res.status(201).json({
+              status: 201,
+              data: savedUser,
+          }); 
+      })
+  });
+}
+
+
  // Destroy user
 const destroy = (req, res) => {
   db.User.findByIdAndDelete(
@@ -123,6 +145,7 @@ module.exports = {
   profile,
   update,
   addMovie,
+  removeMovie,
   destroy,
   destroyPayment,
 };
