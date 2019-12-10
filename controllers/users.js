@@ -98,6 +98,7 @@ const addMovie = (req,res) => {
   });
 }
 
+// TODO Check if the movie is already added
 
 const removeMovie = (req,res) => {
   const movie = req.params.movieId;
