@@ -13,10 +13,9 @@
 
 ## WireFrame / ERD / React Data flow
 
-![wireframe](./public/chulo-wireframe/landingPage.png) 
 ![wireframe](./public/chulo-wireframe/signUp.png) 
 ![wireframe](./public/chulo-wireframe/login.png) 
-![wireframe](./public/chulo-wireframe/movies/myMovies.png) 
+![wireframe](./public/chulo-wireframe/movies/movieCard.png) 
 ![wireframe](./public/chulo-wireframe/landingPage.png) 
 ![wireframe](./public/chulo-wireframe/landingPage.png) 
 ![wireframe](./public/chulo-wireframe/landingPage.png) 
