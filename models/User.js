@@ -29,7 +29,6 @@ const UserSchema = mongoose.Schema({
   my_movies: [{
     type: Schema.Types.ObjectId,
     ref: 'Movie',
-    unique: true,
   }],
   payment: {
     first_name: {type: String},

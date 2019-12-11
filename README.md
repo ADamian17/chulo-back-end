@@ -12,8 +12,7 @@
 - In the dropdown menu the user can access to their account and payment details, __(Edit, Update or delete)__.
 
 ## WireFrame / ERD / React Data flow
-
------------------------------------------------ | ------------------------------------------------------------
+                                                      |   
 ![wireframe](./public/chulo-wireframe/landingPage.png) | ![wireframe](./public/chulo-wireframe/signUp.png) 
 ![wireframe](./public/chulo-wireframe/login.png) |  ![wireframe](./public/chulo-wireframe/movieCard.png) 
 
