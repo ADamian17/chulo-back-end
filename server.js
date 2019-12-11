@@ -44,4 +44,6 @@ app.use("/api/v1/auth", routes.auth);
 app.use("/api/v1/users", routes.users);
 app.use("/api/v1/movies", routes.movies);
 
-app.listen( PORT, () => console.log(`Server connected at http://localhost:${PORT}`));
+//heroku changes to server.js
+app.set('port', process.env.PORT || 4000);
+app.listen( app.get('port'), () => console.log(`Server connected at http://localhost:${app.get('port')}`));
