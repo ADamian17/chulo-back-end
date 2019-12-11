@@ -98,23 +98,25 @@ const addMovie = (req,res) => {
   });
 }
 
+// TODO Check if the movie is already added
 
 const removeMovie = (req,res) => {
-  const movie = req.params.movieId;
+  const deletedMovie = req.params.movieId;
   db.User.findById(req.params.id, (err, foundUser) =>{
+    let updatedMovies = foundUser.my_movies.filter( movie => movie._id.toString() !== deletedMovie);
       if (err) return res.status(500).json({
           status: 500,
           error: [{message: 'Uh oh, something went wrong. Please try again'}],
       });
-      foundUser.my_movies.pop(movie);
-      foundUser.save((err, savedUser) => {
+      foundUser.my_movies = updatedMovies;
+      foundUser.save((err) => {
           if (err) return res.status(500).json({
               status: 500,
               error: [{message: 'Uh oh, something went wrong. Movie can not be added'}, err],
           });
-          return res.status(201).json({
-              status: 201,
-              data: savedUser,
+          return res.status(200).json({
+              status: 200,
+              data: deletedMovie,
           }); 
       })
   });
