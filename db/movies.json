@@ -3,7 +3,7 @@
     "title": "Batman", 
     "year":"1989", 
     "img":"http://www.gstatic.com/tv/thumb/v22vodart/11724/p11724_v_v8_ac.jpg", 
-    "genre": ["Action"], 
+    "genre": ["action, crime"], 
     "description": "Having witnessed his parents' brutal murder as a child, millionaire philanthropist Bruce Wayne (Michael Keaton) fights crime in Gotham City disguised as Batman, a costumed hero who strikes fear into the hearts of villains. But when a deformed madman who calls himself The Joker (Jack Nicholson) seizes control of Gotham's criminal underworld, Batman must face his most ruthless nemesis ever while protecting both his identity and his love interest, reporter Vicki Vale (Kim Basinger).", 
     "movie_link": "",
     "cast": [
@@ -25,7 +25,7 @@
     "title": "Batman Begins", 
     "year":"2005", 
     "img":"http://www.gstatic.com/tv/thumb/v22vodart/35903/p35903_v_v8_bb.jpg", 
-    "genre": ["Crime"], 
+    "genre": ["crime , action"], 
     "description": "A young Bruce Wayne (Christian Bale) travels to the Far East, where he's trained in the martial arts by Henri Ducard (Liam Neeson), a member of the mysterious League of Shadows. When Ducard reveals the League's true purpose -- the complete destruction of Gotham City -- Wayne returns to Gotham intent on cleaning up the city without resorting to murder. With the help of Alfred (Michael Caine), his loyal butler, and Lucius Fox (Morgan Freeman), a tech expert at Wayne Enterprises, Batman is born.", 
     "movie_link": "",
     "cast": [
@@ -51,7 +51,7 @@
     "title": "Batman The Dark Knight", 
     "year":"2008", 
     "img":"http://www.gstatic.com/tv/thumb/v22vodart/173378/p173378_v_v8_at.jpg", 
-    "genre": ["fantasy"], 
+    "genre": ["action ,fantasy"], 
     "description": "With the help of allies Lt. Jim Gordon (Gary Oldman) and DA Harvey Dent (Aaron Eckhart), Batman (Christian Bale) has been able to keep a tight lid on crime in Gotham City. But when a vile young criminal calling himself the Joker (Heath Ledger) suddenly throws the town into chaos, the caped Crusader begins to tread a fine line between heroism and vigilantism.", 
     "movie_link": "",
     "cast": [
@@ -73,12 +73,98 @@
     "title": "The Proposal", 
     "year":"2009", 
     "img":"http://www.gstatic.com/tv/thumb/v22vodart/192250/p192250_v_v8_ac.jpg", 
-    "genre": ["comedy"], 
+    "genre": ["comedy, romance"], 
     "description": "Faced with deportation to her native Canada, high-powered book editor Margaret Tate (Sandra Bullock) says she's engaged to marry Andrew Paxton (Ryan Reynolds), her hapless assistant. Andrew agrees to the charade, but imposes a few conditions of his own, including flying to Alaska to meet his eccentric family. With a suspicious immigration official always lurking nearby, Margaret and Andrew must stick to their wedding plan despite numerous mishaps.", 
     "movie_link": "",
     "cast": [
       { 
         "actor_name": "Ryan Reynolds",
+        "actor_photo": ""
+      }
+    ]
+  },
+  {
+    "title": "Joker", 
+    "year":"2019", 
+    "img":"https://pbs.twimg.com/media/EDEsh0gU4AUTO3P?format=jpg&name=900x900", 
+    "genre": ["crime, drama"], 
+    "description": "Forever alone in a crowd, failed comedian Arthur Fleck seeks connection as he walks the streets of Gotham City. Arthur wears two masks -- the one he paints for his day job as a clown, and the guise he projects in a futile attempt to feel like he's part of the world around him. Isolated, bullied and disregarded by society, Fleck begins a slow descent into madness as he transforms into the criminal mastermind known as the Joker.", 
+    "movie_link": "",
+    "cast": [
+      { 
+        "actor_name": "joaquin phoenix",
+        "actor_photo": ""
+      }
+    ]
+  },
+  {
+    "title": "Coco", 
+    "year":"2017", 
+    "img":"https://m.media-amazon.com/images/M/MV5BYjQ5NjM0Y2YtNjZkNC00ZDhkLWJjMWItN2QyNzFkMDE3ZjAxXkEyXkFqcGdeQXVyODIxMzk5NjA@._V1_.jpg", 
+    "genre": ["Fantasy, Mystery"], 
+    "description": "Despite his family's generations-old ban on music, young Miguel dreams of becoming an accomplished musician like his idol Ernesto de la Cruz. Desperate to prove his talent, Miguel finds himself in the stunning and colorful Land of the Dead. After meeting a charming trickster named Héctor, the two new friends embark on an extraordinary journey to unlock the real story behind Miguel's family history.", 
+    "movie_link": "",
+    "cast": [
+      { 
+        "actor_name": "",
+        "actor_photo": ""
+      }
+    ]
+  },
+  {
+    "title": "Friends with Benefits", 
+    "year":"2011", 
+    "img":"http://www.gstatic.com/tv/thumb/v22vodart/8405003/p8405003_v_v8_ab.jpg", 
+    "genre": [" romance, comedy "], 
+    "description": "Jamie (Mila Kunis) is a New York-based executive recruiter who entices Dylan (Justin Timberlake), an art director from Los Angeles, to take a job at the New York office of GQ magazine. Finding that they have much in common, the two become fast friends. Feeling jaded by a number of broken romances, Dylan and Jamie decide that they are ready to quit looking for true love and focus on having fun. However, complications unfold when the two best pals add sex to their relationship.", 
+    "movie_link": "",
+    "cast": [
+      { 
+        "actor_name": "Mila Kunis",
+        "actor_photo": ""
+      },
+      { 
+        "actor_name": "Justin Timberlake",
+        "actor_photo": ""
+      }
+    ]
+  },
+  {
+    "title": "That Awkward Moment", 
+    "year":"2014", 
+    "img":"http://www.gstatic.com/tv/thumb/v22vodart/10093193/p10093193_v_v8_ab.jpg", 
+    "genre": [" romance, comedy "], 
+    "description": "Best pals Jason (Zac Efron) and Daniel (Miles Teller) indulge in casual flings and revel in their carefree, unattached lives. After learning that the marriage of their friend Mikey (Michael B. Jordan) is over, they gladly welcome him back into their circle. The three young men make a pact to have fun and avoid commitment. However, when all three find themselves involved in serious relationships, they must keep their romances secret from one another.", 
+    "movie_link": "",
+    "cast": [
+      { 
+        "actor_name": "Zac Efron",
+        "actor_photo": ""
+      },
+      { 
+        "actor_name": "Miles Teller",
+        "actor_photo": ""
+      },
+      { 
+        "actor_name": "Michael B. Jordan",
+        "actor_photo": ""
+      }
+    ]
+  },
+  {
+    "title": "Need for Speed", 
+    "year":"2014", 
+    "img":"http://www.gstatic.com/tv/thumb/v22vodart/10173171/p10173171_v_v8_ac.jpg", 
+    "genre": [" drama, crime "], 
+    "description": "Tobey Marshall (Aaron Paul), a mechanic, races muscle cars in an underground circuit. Struggling to keep his business afloat, he reluctantly partners with wealthy but treacherous Dino Brewster (Dominic Cooper). However, Dino frames Tobey for a crime that sends him to prison. Two years later, Tobey is out and bent on revenge; his only chance to take down Dino is to beat him in a high-stakes race. But to get there in time, he must successfully evade an army of cops and bounty hunters.", 
+    "movie_link": "",
+    "cast": [
+      { 
+        "actor_name": "Aaron Pau",
+        "actor_photo": ""
+      },
+      { 
+        "actor_name": "Dominic Cooper",
         "actor_photo": ""
       }
     ]

@@ -2,7 +2,11 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const UserSchema = mongoose.Schema({
-  name: {
+  first_name: {
+    type: String,
+    required: [true, 'Name is required'],
+  },
+  last_name: {
     type: String,
     required: [true, 'Name is required'],
   },
@@ -21,17 +25,21 @@ const UserSchema = mongoose.Schema({
   },
   free_plan: {
     type: Boolean,
-    default: false,
+    default: true,
   },
   my_movies: [{
     type: Schema.Types.ObjectId,
     ref: 'Movie',
+    unique: true,
   }],
-  // payment: [{
-  //   type: Schema.Types.ObjectId,
-  //   ref: 'Payment',
-  //  required: [true, 'Payment is required'],
-  // }],
+  payment: {
+    first_name: {type: String},
+    last_name: {type: String},
+    card_num: {type: String},
+    exp_year: {type: String},
+    exp_month: {type: String},
+    code: {type: String},
+  },
   createdAt: {
     type: Date,
     default: Date.now,

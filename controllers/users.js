@@ -38,43 +38,43 @@ const profile = (req, res) => {
 
 // Update User
 const update = (req, res) => {
-  db.User.findById(
-    bcrypt.genSalt(10, (err, salt) => {
-      if (err)
-        return res.status(500).json({
-          status: 500,
-          message: "Something went wrong. Please try again"
-       });
-       bcrypt.hash(req.body.password, salt, (err, hash) => {
-        if (err)
-          return res.status(500).json({
-            status: 500,
-            message: "Something went wrong. Please try again"
-          });
-        const updatedUser = {
-          name: req.body.name,
-          email: req.body.email,
-          password: hash,
-          birthday: req.body.birthday,
-        };
-        db.User.findByIdAndUpdate(
-          req.params.id,
-          updatedUser,
-          {new: true}, (err, updatedUser) => {
-            if (err)  return res.status(500).json({
-              status: 500,
-              error: [{message: 'Something went wrong. Please try again'}],
-            });
-            res.json({
-              status: 200,
-              count: 1,
-              data: updatedUser,
-              requestedAt: new Date().toLocaleString()
-            });
-         });
+  req.body.free_plan = false
+  db.User.findByIdAndUpdate(
+    req.params.id,
+    req.body,
+    {new: true}, (err, updatedUser) => {
+      if (err)  return res.status(500).json({
+        status: 500,
+        error: [{message: 'Something went wrong. Please try again'}],
       });
-   }))
+      res.json({
+        status: 200,
+        count: 1,
+        data: updatedUser,
+        requestedAt: new Date().toLocaleString()
+      });
+   });
 };
+
+// delete payment
+const destroyPayment = (req, res) => {
+  req.body.payment = null
+  db.User.findByIdAndUpdate(
+    req.params.id,
+    req.body,
+    {new: true}, (err, updatedUser) => {
+      if (err)  return res.status(500).json({
+        status: 500,
+        error: [{message: 'Something went wrong. Please try again'}],
+      });
+      res.json({
+        status: 200,
+        count: 1,
+        data: updatedUser,
+        requestedAt: new Date().toLocaleString()
+      });
+   });
+}
 
 // Add Movie
 const addMovie = (req,res) => {
@@ -86,7 +86,6 @@ const addMovie = (req,res) => {
       });
       foundUser.my_movies.push(movie);
       foundUser.save((err, savedUser) => {
-        console.log(savedUser)
           if (err) return res.status(500).json({
               status: 500,
               error: [{message: 'Uh oh, something went wrong. Movie can not be added'}, err],
@@ -94,6 +93,30 @@ const addMovie = (req,res) => {
           return res.status(201).json({
               status: 201,
               data: savedUser,
+          }); 
+      })
+  });
+}
+
+// TODO Check if the movie is already added
+
+const removeMovie = (req,res) => {
+  const deletedMovie = req.params.movieId;
+  db.User.findById(req.params.id, (err, foundUser) =>{
+    let updatedMovies = foundUser.my_movies.filter( movie => movie._id.toString() !== deletedMovie);
+      if (err) return res.status(500).json({
+          status: 500,
+          error: [{message: 'Uh oh, something went wrong. Please try again'}],
+      });
+      foundUser.my_movies = updatedMovies;
+      foundUser.save((err) => {
+          if (err) return res.status(500).json({
+              status: 500,
+              error: [{message: 'Uh oh, something went wrong. Movie can not be added'}, err],
+          });
+          return res.status(200).json({
+              status: 200,
+              data: deletedMovie,
           }); 
       })
   });
@@ -124,5 +147,7 @@ module.exports = {
   profile,
   update,
   addMovie,
+  removeMovie,
   destroy,
+  destroyPayment,
 };

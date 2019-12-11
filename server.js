@@ -25,6 +25,7 @@ app.use(cors(corsOptions));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
+
 // Session
 app.use(
   session({
@@ -44,6 +45,3 @@ app.use("/api/v1/users", routes.users);
 app.use("/api/v1/movies", routes.movies);
 
 app.listen( PORT, () => console.log(`Server connected at http://localhost:${PORT}`));
-
-
-// TODO Fixed Movie to movies
