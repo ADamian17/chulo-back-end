@@ -15,7 +15,7 @@
 
 ![wireframe](./public/chulo-wireframe/landingPage.png) ![wireframe](./public/chulo-wireframe/signUp.png) 
 ![wireframe](./public/chulo-wireframe/login.png) ![wireframe](./public/chulo-wireframe/movieCard.png) 
-![wireframe](./public/chulo-wireframe/myMovie.png) 
+![wireframe](./public/chulo-wireframe/myMovies.png) 
 ![wireframe](./public/chulo-wireframe/reactDataflow.png) 
 ![wireframe](./public/chulo-wireframe/ERD.png) 
 
