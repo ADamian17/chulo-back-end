@@ -4,9 +4,9 @@ const dbUrl = process.env.MONGODB_URI || 'Connected to server';
 
 
 
-mongoose.connect(dbUrl, {
+mongoose.connect(process.env.MONGODB_URI || dbUrl, {
 
-   useNewUrlParser: true,
+    useNewUrlParser: true,
     useFindAndModify: false,
     useCreateIndex: true,
     useUnifiedTopology: true
