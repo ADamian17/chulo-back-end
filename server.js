@@ -14,7 +14,7 @@ const routes = require('./routes')
 
 // CORS - ['Cross Origi Resource Sharing'] - Importante quitalo despues
 const corsOptions = {
-  origin: [`https://watchchulo.herokuapp.com`],
+  origin: [`https://watchchulo.herokuapp.com`, `http://localhost:3000`], 
   credentials: true, 
   optionsSuccessStatus: 200 
 };
