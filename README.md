@@ -13,12 +13,14 @@
 
 ## WireFrame / ERD / React Data flow
 
+![wireframe](./public/chulo-wireframe/landingPage.png) 
 ![wireframe](./public/chulo-wireframe/signUp.png) 
 ![wireframe](./public/chulo-wireframe/login.png) 
 ![wireframe](./public/chulo-wireframe/movieCard.png) 
 ![wireframe](./public/chulo-wireframe/movie/myMovie.png) 
-![wireframe](./public/chulo-wireframe/landingPage.png) 
-![wireframe](./public/chulo-wireframe/landingPage.png) 
+![wireframe](./public/chulo-wireframe/reactDataFlow.png) 
+![wireframe](./public/chulo-wireframe/ERD.png) 
+
 
 
 ## Some Code Example
