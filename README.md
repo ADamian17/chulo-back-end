@@ -13,7 +13,7 @@
 
 ## Some Code Example
 
-###### RemoveMovie/Controller :+1
+###### RemoveMovie/Controller (Back-end) 
 ````javaScript
 const removeMovie = (req,res) => {
   const deletedMovie = req.params.movieId;
@@ -37,6 +37,36 @@ const removeMovie = (req,res) => {
   });
 }
 ````
+
+###### RemoveMovie/Component (Front-end)
+
+```javaScript 
+// Parent Component
+state = {
+    userMovies:[],
+    loaded: false
+  }
+  
+   handleRemoveMovie = (event, id) => {
+    event.preventDefault()
+    let resId = id
+    axios.put(`${process.env.REACT_APP_API_URL}/users/${this.props.currentUser}/my_movies/${resId}/removemovie`, { withCredentials: true })
+    .then(res => {
+      if (res.status === 200 ) {
+        let updatedMovies = this.state.userMovies.filter( movie => movie._id !== res.data.data)
+  
+        this.setState({
+          userMovies: updatedMovies,
+        }) 
+      }
+    })
+    .catch(err => console.log(err));
+
+
+  // Child Componet
+  <button type="button" className={`btn btn-sm btn-outline-secondary ${this.state.addedMovie && "disable"}`}  onClick={(event) => this.props.handleRemoveMovie(event, this.props.movie._id)} >--</button>
+  }
+``` 
 
 
 ## Next Steps
