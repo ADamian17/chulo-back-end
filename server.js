@@ -29,7 +29,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 // Session
 app.use(
   session({
-  store: new MongoStore({ url: process.env.MONGO_URI }),
+  store: new MongoStore({ url: process.env.MONGODB_URI }),
   secret: process.env.SESSION_SECRET,
   resave: false,
   saveUninitialized: false, 
@@ -45,5 +45,4 @@ app.use("/api/v1/users", routes.users);
 app.use("/api/v1/movies", routes.movies);
 
 //heroku changes to server.js
-app.set('port', process.env.PORT || 4000);
-app.listen( app.get('port'), () => console.log(`Server connected at http://localhost:${app.get('port')}`));
+app.listen(process.env.PORT || 4000, () => console.log(`Server connected at http://localhost:${PORT}`))
