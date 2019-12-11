@@ -98,8 +98,7 @@ const addMovie = (req,res) => {
   });
 }
 
-// TODO Check if the movie is already added
-
+// remove movie
 const removeMovie = (req,res) => {
   const deletedMovie = req.params.movieId;
   db.User.findById(req.params.id, (err, foundUser) =>{
