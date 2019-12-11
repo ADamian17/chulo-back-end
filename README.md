@@ -13,7 +13,7 @@
 
 ## WireFrame / ERD / React Data flow
 
-![wireframe](./public/chulo-wireframe)
+![wireframe](./public/chulo-wireframe/landingPage.png)
 
 ## Some Code Example
 
