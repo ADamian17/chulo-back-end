@@ -11,6 +11,10 @@
 - To see the movie details the user can use the button __details__.  
 - In the dropdown menu the user can access to their account and payment details, __(Edit, Update or delete)__.
 
+## WireFrame / ERD / React Data flow
+
+![wireframe](./public/chulo-wireframe)
+
 ## Some Code Example
 
 ###### RemoveMovie/Controller (Back-end) 
@@ -67,7 +71,6 @@ state = {
   <button type="button" className={`btn btn-sm btn-outline-secondary ${this.state.addedMovie && "disable"}`}  onClick={(event) => this.props.handleRemoveMovie(event, this.props.movie._id)} >--</button>
   }
 ``` 
-
 
 ## Next Steps
 * __Stream Content__
