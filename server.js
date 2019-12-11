@@ -14,7 +14,7 @@ const routes = require('./routes')
 
 // CORS - ['Cross Origi Resource Sharing'] - Importante quitalo despues
 const corsOptions = {
-  origin: [`http://localhost:3000`],
+  origin: [`https://chulo-react.herokuapp.com/`],
   credentials: true, 
   optionsSuccessStatus: 200 
 };
